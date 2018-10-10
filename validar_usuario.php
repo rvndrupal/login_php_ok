@@ -77,7 +77,7 @@
 
        if ($resultado=mysqli_fetch_array($valido)) {
            $_SESSION['usuario']=$usuario;
-           header("Location: sistema.php");
+           header("Location: panel.php");
        } else {
         echo "<script>
         alert('Usuario no encontrado favor de validar de nuevo');

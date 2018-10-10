@@ -1,3 +1,14 @@
+<?php
+     session_start();
+     if(isset($_SESSION['usuario'])){
+         echo"Inicio Sesión correctamente ";
+         echo"<a href='cerrar.php'>Cerrar Sesión</a>";
+         
+     }else{
+         header("Location: index.php");
+     }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +42,7 @@
     {
         echo"<script>
         alert('Actualizado correctamente');
-        window.location= 'crud.php'
+        window.location= 'panel.php'
         </script>";
     }
     else{

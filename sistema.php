@@ -23,7 +23,7 @@
 
     <h1>Todo el sistema</h1>
     <p>Página Principal del Sistema</p>
-    <a href="segunda.php">Segunda</a>
+    <a href="crud.php">Panel Administración</a>
 
     
 </body>
