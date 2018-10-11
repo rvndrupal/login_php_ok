@@ -93,16 +93,16 @@
         }
     
         //solo numeros y letras   
-        else if(!preg_match("/^[0-9a-zA-Z]+$/",$usuario)){
+        else if(!preg_match("/^[0-9a-zA-Z_-]+$/",$usuario)){
             echo "<script>
-            alert('El campo nombre solo acepta numeros y letras sin acentos');
+            alert('El campo nombre solo acepta numeros y letras en Mayusculas y Minusculas guion( - _ ) sin acentos');
             window.location= 'registrar.php'
             </script>";  
         }
     
-        else if(!preg_match("/^[0-9a-zA-Z]+$/",$clave)){
+        else if(!preg_match("/^[0-9a-zA-Z_-]+$/",$clave)){
             echo "<script>
-            alert('El campo password solo acepta numeros y letras sin acentos');
+            alert('El campo nombre solo acepta numeros y letras en Mayusculas y Minusculas guion( - _ ) sin acentos');
             window.location= 'registrar.php'
             </script>";  
         }
