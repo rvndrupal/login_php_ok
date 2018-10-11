@@ -50,7 +50,7 @@
 					<div class="celdaCentradaVertical anchoAltoFull contenidoBodyCentral">
 						<div class="col-md-celda col-md-logos">
 							<div class="col-md-10 col-md-offset-2">
-								<div class="row"><div class="col-xs-12 vcenter"><img src="imagenes/plantilla/escudoNacional.png" class="center-block img-responsive" /></div></div>
+								<div class="row"><div class="col-xs-12 vcenter"><img style="width:450px; height:453px;" src="imagenes/plantilla/escudo2.png" class="center-block img-responsive" /></div></div>
 							</div>
 						</div>
 						<div class="col-md-celda">
