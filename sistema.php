@@ -23,8 +23,12 @@
 
     <h1>Todo el sistema</h1>
     <p>Página Principal del Sistema</p>
-    <a href="panel.php">Panel Administración</a>
 
+    <?php
+     if(isset($_SESSION['usuario']) and $_SESSION['rol']=="admin"){
+      echo'<a href="panel.php">Panel Administración</a>';
+     }
+     ?>
     
 </body>
 </html>

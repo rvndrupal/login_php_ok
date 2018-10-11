@@ -64,7 +64,7 @@
 
 										<div class="form-group">
 											<label class="col-sm-4 text-right">Usuario:</label>
-											<div class="col-sm-8"><input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usuario" required /></div><br><br>
+											<div class="col-sm-8"><input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usuario"  required /></div><br><br>
 										</div>
 										<div class="form-group">
 											<label class="col-sm-4 text-right">Contraseña:</label>

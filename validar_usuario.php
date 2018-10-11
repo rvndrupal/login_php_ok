@@ -40,15 +40,15 @@
     }
 
     //maximos
-    else if(strlen($usuario) > 15){
+    else if(strlen($usuario) > 30){
         echo "<script>
-        alert('El maximo de caracteres en el nombre es de Quince');
+        alert('El maximo de caracteres en el nombre es de Treinta');
         window.location= 'index.php'
         </script>";  
     }
-    else if(strlen($clave) > 15){
+    else if(strlen($clave) > 30){
         echo "<script>
-        alert('El maximo de caracteres en el password es  de Quince');
+        alert('El maximo de caracteres en el password es  de Treinta');
         window.location= 'index.php'
         </script>";  
     }
