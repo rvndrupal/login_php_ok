@@ -81,7 +81,9 @@
 
       //var_dump($encriptado);
         
-       $valido=$con->query("SELECT * FROM $table WHERE usuario= '$usuario' AND clave='$clave' ");
+       $valido=$con->query("SELECT * FROM $table WHERE usuario= BINARY '$usuario' AND clave= BINARY '$clave' ");
+
+       //con el BINARY valida mayusculas y minusculas
 
        if ($resultado=mysqli_fetch_array($valido)) {      
            $_SESSION['usuario']=$usuario;
