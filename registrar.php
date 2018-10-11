@@ -62,6 +62,18 @@
         <label class="col-sm-4 text-right">Email:</label>
         <input type="email" title="email" name="correo" placeholder="Email" pattern="^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$" required>
         </div>
+
+        <div class="form-group">
+        <label class="col-sm-4 text-right">Selecciona una Opcion:</label>
+        <select name="rol">
+
+        <option value="admin">Administrador</option>
+
+        <option value="user" selected>Usuario</option>    
+        </select>
+          </div>
+
+
         <div class="form-group ">
         <button type="submit" name="submit" class="boton_add btn btn-sm btn-primary">Crear Cuenta</button>
         <a href="panel.php" class="btn btn-sm btn-primary lista">Lista</a>

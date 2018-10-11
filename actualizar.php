@@ -23,6 +23,7 @@
     $usuario=$_POST['usuario_edit'];
     $clave=$_POST['clave_edit'];
     $correo=$_POST['correo_edit'];
+    $rol=$_POST['rol_edit'];
     $id=$_POST['id'];
 
    
@@ -34,9 +35,9 @@
         die("La conexion fallo". $con->connect_error);
     }
 
-    //$UpdateSql = "UPDATE `crud` SET first_name='$fname', last_name='$lname', gender='$gender', age=$age, email_id='$email' WHERE id=$id";
+    //$encriptado=hash("SHA256",$clave);
 
-    $actualizar=$con->query("UPDATE $table SET usuario='$usuario', clave='$clave', correo='$correo' WHERE id=$id");
+    $actualizar=$con->query("UPDATE $table SET usuario='$usuario', clave='$clave', correo='$correo' , rol='$rol' WHERE id=$id");
 
     if($actualizar)
     {

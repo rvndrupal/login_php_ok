@@ -40,3 +40,36 @@
 .lista {
     margin: 36px 0 0 26px;
 }
+
+.usuario_sesion {
+    line-height: 6px;
+    font-family: Trajan;
+    font-size: 16px;
+    color: black;
+    margin: 32px 0px 0px 20px;
+    position: absolute;
+}
+
+.container {
+    min-height: 100%;
+    margin: auto;
+}
+
+.space_bottom {
+    position: relative;
+    bottom: 0;
+}
+
+.error_404 {
+    margin: 0 0 0 77px;
+}
+
+.error_403 {
+    margin: 0 0 0 -4px;
+}
+
+.ini_sesion {
+    margin: 0 0 0 196px;
+    color: black;
+    font-size: 23px;
+}

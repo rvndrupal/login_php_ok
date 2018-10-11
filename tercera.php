@@ -1,6 +1,11 @@
 <?php
 
     session_start();
+    echo "<pre>"; 
+    print_r($_SESSION); 
+    echo "</pre>";
+
+
     if(isset($_SESSION['usuario'])){
         echo"Inicio Sesión correctamente ";
         echo"<a href='cerrar.php'>Cerrar Sesión</a>";
@@ -22,9 +27,7 @@
 <body>
 
 <?php
-       echo "<pre>"; 
-       print_r($_SESSION); 
-       echo "</pre>"; 
+       
      include('conexion.php');
      $admin=$con->query("SELECT * FROM $table WHERE usuario= 'rodrigo' ");
 

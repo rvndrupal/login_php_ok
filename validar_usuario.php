@@ -73,11 +73,20 @@
    
    
    else{
+
+      $contador=0;
+
+      
+      //$encriptado=hash("SHA256",$clave);
+
+      //var_dump($encriptado);
+        
        $valido=$con->query("SELECT * FROM $table WHERE usuario= '$usuario' AND clave='$clave' ");
 
-       if ($resultado=mysqli_fetch_array($valido)) {
+       if ($resultado=mysqli_fetch_array($valido)) {      
            $_SESSION['usuario']=$usuario;
-           header("Location: panel.php");
+           $_SESSION['rol']=$resultado['rol'];
+          header("Location: panel.php");
        } else {
         echo "<script>
         alert('Usuario no encontrado favor de validar de nuevo');

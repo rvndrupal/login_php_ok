@@ -26,6 +26,9 @@
     $usuario=$_POST['usuario'];
     $clave=$_POST['clave'];
     $correo=$_POST['correo'];
+    $rol=$_POST['rol'];
+
+    
 
     include('conexion.php');
    
@@ -46,7 +49,10 @@
         window.location= 'registrar.php'
         </script>";
     }else{
-      $insertar="Insert into $table values ('','$usuario','$clave','$correo')";
+
+        //$encriptado=hash("SHA256",$clave);
+
+      $insertar="Insert into $table values ('','$usuario','$clave','$correo','$rol')";
 
       if($con->query($insertar))
       {

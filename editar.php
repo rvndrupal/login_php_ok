@@ -64,13 +64,21 @@
 
         <div class="form-group">
         <label class="col-sm-4 text-right">Password:</label>
-        <input type="text" title="clave" name="clave_edit" placeholder="Password" value="<?php echo $r['clave'];  ?>" required>
+        <input type="password" title="clave" name="clave_edit" placeholder="Password" value="<?php echo $r['clave'];  ?>" required>
         </div>
 
         <div class="form-group">
         <label class="col-sm-4 text-right">Email:</label>
         <input type="email" title="email" name="correo_edit" placeholder="Email" pattern="^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$" value="<?php echo $r['correo'];  ?>"required>
         </div>
+
+        <div class="form-group">
+        <label class="col-sm-4 text-right">Selecciona una Opcion:</label>
+        <select name="rol_edit">
+        <option value="admin">Administrador</option>
+        <option value="user" selected>Usuario</option>    
+        </select>
+          </div>
         <input type="hidden" name="id" value="<?php echo $r['id'];  ?>" >
         <button type="submit" name="submit" class="boton_edit btn btn-sm btn-primary">Editar Cuenta</button>
         <a href="panel.php" class="btn btn-sm btn-primary lista">Lista</a>

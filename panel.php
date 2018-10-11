@@ -1,10 +1,16 @@
 <?php
+      
      session_start();
-     if(isset($_SESSION['usuario'])){
+
+     if(isset($_SESSION['usuario']) and $_SESSION['rol']=="admin"){
          
         
          
-     }else{
+     }else if(isset($_SESSION['usuario']) and $_SESSION['rol']=="user"){
+        header("Location: sistema.php");
+     }
+     
+     else{
          header("Location: index.php");
      }
 
@@ -36,7 +42,7 @@
                     <nav class="navbar navbar-inverse navbar-modificado navbar-fixed-top" role="navigation">
                         <div class="container">
                             <div class="navbar-header navbar-header-modificado">
-                                <h2>Directorio de Usuarios</h2>
+                                <h2>Directorio de Usuarios</h2>                               
                                 <div class="sesion"><?php echo"<a href='cerrar.php'>Cerrar Sesión</a>"; ?></div>
                             </div>
                         </div>
@@ -46,13 +52,14 @@
         </div>
 
 <div class="container">
+
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">                 
 
                     <a href="registrar.php" class="btn btn-sm btn-primary pull-right nuevo_btn">Nuevo</a>
-                   
+                    <div class="usuario_sesion"><?php echo"Bienvenido ".$_SESSION['usuario'];  ?></div>
                    
                 </div>
                
@@ -64,6 +71,7 @@
                                 <th width="10px">ID</th>
                                 <th>Nombre</th>
                                 <th>Correo</th>
+                                <th>Rol</th>
                                 <th colspan="3">&nbsp;</th>
                             </tr>
                         </thead>
@@ -82,7 +90,8 @@
                             <tr>
                                 <td> '.$reg["id"].' </td>
                                 <td> '.$reg["usuario"].'</td>
-                                <td>'.$reg["correo"].'</td>                              
+                                <td>'.$reg["correo"].'</td>
+                                <td>'.$reg["rol"].'</td>                               
                                 <td width="10px">                                
                                 <a href="editar.php?id='.$reg["id"].'" class="btn btn-sm btn-primary">Editar</a>                           
                                 </td>
@@ -105,9 +114,17 @@
             </div>
         </div>
     </div>
-</div>
+    <!--IR A LA PÁGINA PRINCIPAL-->
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+        <a href="sistema.php" class="btn btn-sm btn-success pull-right ">Sistema</a>    
+        </div>
+    </div>
 
-<!-- ==== PARTE 3: AREA DEL PIE DE PAGINA EN LA PLANTILLA ESTABLECIDA ==== -->
+
+</div><!--container-->
+
+<!-- ==== PARTE 3: AREA DEL PIE DE PAGINA EN LA PLANTILLA ESTABLECIDA ==== 
 <div class="space_bottom"></div>
 				<footer class="main-footer">
 					<div class="container">
@@ -131,7 +148,7 @@
 						<div class="barra03"></div>
 					</div>
                 </div>
-                    </div>
+                    </div>-->
                     
 
 
